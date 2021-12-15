@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('./header'); %>
+</header>
+
+<main class="container mt-5">
+  <h1 class="text-center">Home Overview</h1><br>
+  <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+              <div class="wrapper1">
+                  <h2>Today's Tasks:</h2>
+                  <div class="inputField">
+                      <input type="text" placeholder="Add your new tasks">
+                      <button><i class="fas fa-plus"></i></button>
+                  </div>
+                  <div class="row align-content-center">
+                      <ul class="todoList">
+                          <!-- data are comes from local storage -->
+                      </ul>
+                      <div class="footer">
+                          <span>You have <span class="pendingTasks"></span> pending tasks</span>
+                          <button>Clear All</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Table for Project A -->
+      <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+              <h2>Team Progress:</h2>
+              <h6>PROJECT A: 80%</h6>
+              <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 80%"></div>
+              </div>
+              <div class="table-responsive">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Task</th>
+                              <th scope="col">Progress</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Bella</td>
+                              <td>Task 1</td>
+                              <td>45%</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Bella</td>
+                              <td>Task 2</td>
+                              <td>30%</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td>Jane</td>
+                              <td>Task 4</td>
+                              <td>2%</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <br>
+              <h6>PROJECT B: 30%</h6>
+              <div class="progress">
+                  <div class="progress-bar bg-info" style="width:30%"></div>
+              </div>
+              <!-- Table for Project B -->
+              <div class="table-responsive">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Task</th>
+                              <th scope="col">Progress</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>John</td>
+                              <td>Task 1</td>
+                              <td>20%</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Rose</td>
+                              <td>Task 3</td>
+                              <td>10%</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

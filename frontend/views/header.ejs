@@ -1,0 +1,61 @@
+<style>
+  a.nav-link:hover {
+      text-decoration-color: white;
+      color: white;
+      opacity: 1;
+      text-decoration: underline;
+      transition: 0.5s;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top m-0 p-0" style="background-color: #002741f6;">
+  <div class="container-fluid mb-0">
+      <a class="navbar-brand" href="">
+          <span class="h1">HRMS</span>
+      </a>
+      <!-- Collapsible Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item pe-5">
+                  <a class="nav-link fs-5" href="./index.html">HOME</a>
+              </li>
+              <li class="nav-item pe-5">
+                  <a class="nav-link fs-5" href="./leaves.html">LEAVES</a>
+              </li>
+              <li class="nav-item pe-5">
+                  <a class="nav-link fs-5" href="./claims.html">CLAIMS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link fs-5" href="./calendar.html">CALENDAR</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown pe-2">
+                  <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="material-icons-outlined md-48">notifications</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark  dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">notification 1</a></li>
+                      <li><a class="dropdown-item" href="#">notification 2</a></li>
+                      <li><a class="dropdown-item" href="#">notification 3</a></li>
+                  </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                      <span class="material-icons md-48">account_circle</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark  dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">User Details</a></li>
+                      <li><a class="dropdown-item" href="./login.html" id="logoutBtn">Log out</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
