@@ -2,6 +2,7 @@ const moogoose = require('mongoose')
 const User = require('../database/models/user')
 const Queries = require('../api/queries')
 const Result = require('../objects/result').Result
+const bcryot = require('bcrypt')
 
 async function isEmailExist(req, res, next) {
 
@@ -17,11 +18,12 @@ async function isEmailExist(req, res, next) {
 };
 
 async function createAcc(req, res, next) {
-    if (req.validataResult.success == true){
+    if (req.validataResult.success == true && !req.validataResult.details){
+        const hashedPsw = await bcryot.hash(req.body.password, 10)
         const user = new User({
             _id: new moogoose.Types.ObjectId(),
             email: req.body.email,
-            password: req.body.password,
+            password: hashedPsw,
             fullName: req.body.fullName
         })
 

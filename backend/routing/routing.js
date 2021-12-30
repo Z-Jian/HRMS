@@ -2,20 +2,15 @@ const { ROUTER_CALENDAR } = require("./routes/calendar");
 const { ROUTER_CLAIMS } = require("./routes/claims");
 const { ROUTER_LEAVES } = require("./routes/leaves");
 const { ROUTER_LOGIN } = require("./routes/login");
-const express = require('express');
-const helmet = require('helmet');
 const { ROUTER_REGISTER } = require("./routes/register");
 const errorHandler = require("./routes/error").errorHandler;
+const { ROUTER_HTTP } = require("./middlewares/http");
+const { ROUTER_SET_VIEW } = require("./middlewares/view");
+const login = require('./middlewares/static').FRONTEND.VIEWS.LOGIN
 
 function ROUTING_INIT(app){
-
-    // HTTP Headers
-    app.use(helmet());
-    // HTTP request body for parsing application/json or x-www-form-urlencoded
-    app.use(express.json());
-    app.use(express.urlencoded({
-        extended: false
-    }));
+    ROUTER_SET_VIEW(app);
+    app.use(ROUTER_HTTP);
 
     app.use("/login", ROUTER_LOGIN);
     app.use("/leaves", ROUTER_LEAVES);
@@ -26,7 +21,7 @@ function ROUTING_INIT(app){
     // app.use(errorHandler);
     
     app.get('/', function(req, res){
-        res.send('Welcome to HRMS')
+        res.render(login)
     })
     
 
